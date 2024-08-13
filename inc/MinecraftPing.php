@@ -50,7 +50,7 @@ class MinecraftPing
 			$this->ResolveSRV();
 		}
 
-		$this->Connect( );
+		$this->ConnectBedrock( );
 	}
 
 	public function __destruct( )
@@ -68,7 +68,7 @@ class MinecraftPing
 		}
 	}
 
-	public function Connect( ) : void
+	public function ConnectBedrock( ) : void
 	{
 		$Socket = @\fsockopen( $this->ServerAddress, $this->ServerPort, $errno, $errstr, $this->Timeout );
 
